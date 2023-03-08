@@ -1,0 +1,54 @@
+/* BTN LANG MOBDE */
+.sidebar__btn {
+  position: absolute;
+  display: flex;
+  column-gap: 10px;
+  left: 40px;
+  bottom: 17px;
+  text-align: center;
+  align-items: center;
+
+  max-width: 140px;
+  max-height: 40px;
+}
+
+.sidebar__btn__mode {
+  position: relative;
+  bottom: 4px;
+
+  width: 50px;
+  height: 33.33px;
+
+  background: #ffffff;
+  border-radius: 20px;
+}
+.sidebar__btn__mode::before {
+  content: "";
+  position: absolute;
+  top: 5.5px;
+  left: 5.5px;
+  height: 23px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: var(--bg-sidebar);
+}
+
+.sidebar__btn__mode_on::before {
+  left: 18px;
+}
+
+.sidebar__btn__en-text,
+.sidebar__btn__ua-text {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.43;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+.sidebar__btn__en-text_active,
+.sidebar__btn__ua-text_active {
+  text-shadow: 1px 1px 30px #0fa7aab3;
+  color: #0fa7aab3;
+}

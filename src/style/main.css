@@ -1,0 +1,17 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap");
+
+/* font-family: 'Teko', sans-serif; */
+
+/* * {
+  border: 1px dotted red;
+} */
+:root {
+  --white: #ffffff;
+  --main-green: #0d7377;
+  --bg-sidebar: #323232;
+}
+
+body {
+  font-family: "Teko", sans-serif;
+}

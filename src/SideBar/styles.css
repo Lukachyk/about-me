@@ -1,0 +1,76 @@
+/* SideBar */
+
+.sidebar {
+  width: 300px;
+  min-height: 100vh;
+
+  background: var(--bg-sidebar);
+  box-shadow: 10px 0px 36px #000000;
+}
+.sidebar__logo {
+  max-width: 300px;
+  max-height: 300px;
+
+  background: var(--main-green);
+}
+
+.sidebar__logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  padding: 28px 0;
+
+  font-weight: 500;
+  font-size: 85px;
+  line-height: 1.43;
+  color: var(--white);
+}
+
+.sidebar__logo-text::before {
+  content: "Front-End Developer";
+  position: absolute;
+  padding: 120px 51px 128px;
+
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1.44;
+}
+.sidebar__nav {
+  padding: 40px 40px;
+}
+
+.sidebar__nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 40px;
+}
+
+.sidebar__nav__list__item {
+  display: flex;
+  text-align: center;
+  position: relative;
+}
+
+.sidebar__nav__list__item__link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 69px;
+
+  text-transform: uppercase;
+  color: var(--white);
+}
+.sidebar__nav__list__item__link img {
+  width: 60px;
+  height: 52.5px;
+
+  margin-right: 19px;
+
+  align-self: flex-start;
+}
