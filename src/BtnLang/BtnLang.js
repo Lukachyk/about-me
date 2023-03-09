@@ -1,20 +1,8 @@
-import { useState, useEffect } from "react";
 import "./styles.css";
+import { useLocalStorage } from "../utils/useLocalStorage";
 
 const BtnLang = () => {
-  const [value, setValue] = useState(true);
-
-  const toggleBtn = () => {
-    setValue(!value);
-    localStorage.setItem("buttonValue", !value);
-  };
-
-  useEffect(() => {
-    const storedValue = localStorage.getItem("buttonValue");
-    if (storedValue !== null) {
-      setValue(JSON.parse(storedValue));
-    }
-  }, []);
+  const [value, toggleBtn] = useLocalStorage(true);
 
   return (
     <div className="sidebar__btn">

@@ -1,0 +1,58 @@
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.about {
+  grid-area: main;
+  margin-top: 130px;
+  color: var(--white);
+}
+
+.about__content {
+  max-width: 153;
+}
+.about__content__greetings-name {
+  color: var(--main-text);
+}
+
+.about__content__greetings {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.43;
+}
+.about__content__greetings {
+  position: relative;
+  overflow: hidden;
+  animation: typing 2s steps(60);
+}
+
+@keyframes typing {
+  from {
+    text-indent: -1000px;
+  }
+  to {
+    text-indent: 0;
+  }
+}
+
+.about__content__main-text {
+  max-width: 1053px;
+
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.43;
+  color: var(--main-text);
+  animation: blink 3s ease-in;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

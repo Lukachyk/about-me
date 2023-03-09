@@ -16,7 +16,10 @@ const SideBar = () => {
       <nav className="sidebar__nav">
         <ul className="sidebar__nav__list">
           <li className="sidebar__nav__list__item">
-            <a href="#!" className="sidebar__nav__list__item__link">
+            <a
+              href="#!"
+              className="sidebar__nav__list__item__link sidebar__nav__list__item__link_active"
+            >
               <img src={about} alt="About" />
               About
             </a>

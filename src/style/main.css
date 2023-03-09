@@ -10,8 +10,17 @@
   --white: #ffffff;
   --main-green: #0d7377;
   --bg-sidebar: #323232;
+  --bg-body: #212121;
+  --main-text: #0d7377;
 }
 
 body {
   font-family: "Teko", sans-serif;
+  background: var(--bg-body);
+}
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "sidebar main";
+  column-gap: 80px;
 }
