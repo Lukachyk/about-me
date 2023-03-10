@@ -19,6 +19,7 @@
 }
 
 .sidebar__logo-text {
+  pointer-events: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +73,7 @@
   transition: color 0.3s ease-in;
   transition: text-shadow 2s ease;
 }
+
 .sidebar__nav__list__item__link_active {
   position: relative;
   color: #0fa7aab3;

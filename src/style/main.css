@@ -16,7 +16,13 @@
 
 body {
   font-family: "Teko", sans-serif;
-  background: var(--bg-body);
+  /* background: var(--bg-body); */
+  background: linear-gradient(
+    35deg,
+    var(--bg-body),
+    var(--bg-body),
+    rgb(0, 42, 46)
+  );
 }
 .app {
   display: grid;

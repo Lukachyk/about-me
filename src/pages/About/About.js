@@ -1,4 +1,5 @@
 import GetInTouchBtn from "../../GetInTouchBtb/GetInTouchBtn";
+import Music from "../../Music/Music";
 import NoScroll from "../../utils/NoScroll";
 
 import "./styles.css";
@@ -25,6 +26,7 @@ const About = () => {
           </p>
         </div>
         <GetInTouchBtn />
+        <Music />
       </section>
     </>
   );
