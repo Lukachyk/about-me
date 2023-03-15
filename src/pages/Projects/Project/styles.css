@@ -1,7 +1,13 @@
 .project__content__items__card {
    max-width: 250px;
    max-height: 328px;
+   transition: 0.3s ease;
 }
+
+.project__content__items__card:hover {
+   scale: 1.1;
+}
+
 .projects__content__items {
    display: flex;
    flex-wrap: wrap;
@@ -19,11 +25,26 @@
    border-radius: 10px;
    box-shadow: 5px 0px 26px #000000;
 }
+
+.project__content__items__card__img:hover {
+   animation: box-shadow 3s infinite;
+}
+@keyframes box-shadow {
+   0% {
+      box-shadow: 1px 1px 30px #11cdd000;
+   }
+   50% {
+      box-shadow: 1px 1px 30px #11ccd0b3;
+   }
+   100% {
+      box-shadow: 1px 1px 30px #11cdd000;
+   }
+}
 .project__content__items__card__title {
    font-weight: 400;
    font-size: 64px;
    line-height: 1.4;
-
+   text-shadow: 1px -1px 6px rgb(0 0 0 / 71%);
    color: var(--white);
 }
 

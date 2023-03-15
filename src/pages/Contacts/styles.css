@@ -1,0 +1,55 @@
+.contacts {
+   grid-area: main;
+   margin: 0 auto;
+   max-width: 1622px;
+   max-height: 1080px;
+}
+.contacts__content {
+   padding-top: 158px;
+   justify-content: center;
+   max-width: 479px;
+   max-height: 761px;
+}
+.contacts__content__title {
+   font-weight: 400;
+   font-size: 64px;
+   line-height: 1.43;
+   color: var(--white);
+}
+.contacts__content__form {
+   display: flex;
+   flex-direction: column;
+   row-gap: 26px;
+
+   font-weight: 400;
+   font-size: 40px;
+   line-height: 57px;
+
+   color: #0d7377;
+}
+
+#email,
+#name,
+#comments {
+   width: 499px;
+   height: 70px;
+   color: var(--white);
+   background-color: var(--main-green);
+   border-radius: 10px;
+}
+
+#comments {
+   width: 500px;
+   height: 200px;
+   white-space: pre-wrap;
+}
+
+.contacts__content__form__name__btn {
+   margin-top: 10px;
+   width: 327px;
+   height: 63px;
+
+   border-radius: 10px;
+   color: var(--white);
+   background-color: var(--main-green);
+}

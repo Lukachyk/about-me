@@ -8,7 +8,7 @@ const Project = () => {
          <div className="projects__content__items">
             {listProjects.map((project) => (
                <div key={project.id} className="project__content__items__card">
-                  <a href={project.url}>
+                  <a href={project.url} target="_blank">
                      <img
                         className="project__content__items__card__img"
                         src={project.img}

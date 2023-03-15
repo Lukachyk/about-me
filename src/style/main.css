@@ -18,19 +18,18 @@
 body {
    font-family: 'Teko', sans-serif;
    /* background: var(--bg-body); */
-
+}
+.app {
+   max-width: 1920px;
+   max-height: 10100px;
+   display: grid;
+   grid-template-columns: 300px 1fr;
+   grid-template-areas: 'sidebar main';
+   column-gap: 80px;
    background: linear-gradient(
       35deg,
       var(--bg-body),
       var(--bg-body),
       rgb(0, 42, 46)
    );
-}
-.app {
-   max-width: 1920px;
-   max-height: 1080px;
-   display: grid;
-   grid-template-columns: 300px 1fr;
-   grid-template-areas: 'sidebar main';
-   column-gap: 80px;
 }
