@@ -1,5 +1,5 @@
-@import "./reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap");
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap');
 
 /* font-family: 'Teko', sans-serif; */
 
@@ -7,29 +7,30 @@
   border: 1px dotted red;
 } */
 :root {
-  --white: #ffffff;
-  --main-green: #0d7377;
-  --bg-sidebar: #323232;
-  --bg-body: #212121;
-  --main-text: #0d7377;
+   --white: #ffffff;
+   --main-green: #0d7377;
+   --bg-sidebar: #323232;
+   --bg-body: #212121;
+   --main-text: #0d7377;
+   --shadow: 10px 0px 36px #000000;
 }
 
 body {
-  font-family: "Teko", sans-serif;
-  /* background: var(--bg-body); */
+   font-family: 'Teko', sans-serif;
+   /* background: var(--bg-body); */
 
-  background: linear-gradient(
-    35deg,
-    var(--bg-body),
-    var(--bg-body),
-    rgb(0, 42, 46)
-  );
+   background: linear-gradient(
+      35deg,
+      var(--bg-body),
+      var(--bg-body),
+      rgb(0, 42, 46)
+   );
 }
 .app {
-  max-width: 1920px;
-  max-height: 1080px;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-areas: "sidebar main";
-  column-gap: 80px;
+   max-width: 1920px;
+   max-height: 1080px;
+   display: grid;
+   grid-template-columns: 300px 1fr;
+   grid-template-areas: 'sidebar main';
+   column-gap: 80px;
 }

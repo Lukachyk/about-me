@@ -1,27 +1,26 @@
+import React from 'react';
 import './style/main.css';
-import SideBar from './SideBar/SideBar';
-import About from './pages/About/About';
-import Skills from './pages/Skills/Skills';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SideBar from './SideBar/SideBar';
+import About from './pages/About/About.js';
+import Projects from './pages/Projects/Projects';
 
-// const DialogsContainer = React.lazy(() =>
-//   import("./components/Dialogs/DialogsContainer")
-// );
-// const ProfileContainer = React.lazy(() =>
-//   import("./components/Profile/ProfileContainer")
-// );
-// <Route path="/dialogs/" element={<DialogsContainer />} />
+// const AboutContainer = lazy(() => import('./pages/About/About.js'));
+const SkillsContainer = lazy(() => import('./pages/Skills/Skills'));
 
 function App() {
    return (
       <Router>
          <main className="app">
             <SideBar />
-            <Routes>
-               <Route path="/" element={<div>Home</div>} />
-               <Route path="/about" element={<About />} />
-               <Route path="/skills" element={<Skills />} />
-            </Routes>
+            <Suspense fallback={<div>Loading...</div>}>
+               <Routes>
+                  <Route path="/projects" element={<Projects />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/skills" element={<SkillsContainer />} />
+               </Routes>
+            </Suspense>
          </main>
       </Router>
    );

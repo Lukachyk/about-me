@@ -1,0 +1,19 @@
+.loader {
+   position: absolute;
+   bottom: 0px;
+   z-index: -1;
+   left: 265px;
+   opacity: 0.4;
+
+   animation: goAway 55s linear infinite;
+}
+
+@keyframes goAway {
+   from {
+      left: 0px;
+   }
+   to {
+      left: 2800px;
+      opacity: 0;
+   }
+}

@@ -17,19 +17,14 @@
    column-gap: 100px;
 }
 
-.skills__content__avatar-block {
+.skills__content-avatar__block__img {
    max-width: 633px;
    max-height: 870px;
-   overflow: hidden;
-   background: rgba(13, 116, 119, 0.261);
-   border-radius: 60px;
-}
-
-.skills__content-avatar__block__img {
-   max-height: auto;
-   max-width: 100%;
    height: auto;
    border-radius: 60px;
+   box-shadow: 5px 0px 26px #000000;
+
+   animation: next 10s linear infinite;
 }
 
 /* Уровни */
@@ -59,32 +54,10 @@
    overflow-y: hidden;
    border-radius: 69px;
    background: #fff;
+   box-shadow: 10px 0px 36px #000000;
+   background-image: url('./avatar.jpeg') no-repeat;
    animation: scale 3s linear;
 }
-
-.skills__content__level__scale {
-   height: 100%;
-   width: 20%;
-   border-radius: 60px;
-   background-color: #0d7377;
-   z-index: 2;
-   border: 1px solid #0d7377;
-}
-.skills__content__level__scale-js {
-   width: 25%;
-}
-
-.skills__content__level__scale-css {
-   width: 30%;
-}
-
-.skills__content__level__scale-react {
-   width: 30%;
-}
-.skills__content__level__scale-redux {
-   width: 10%;
-}
-
 @keyframes scale {
    0% {
       width: 0px;
@@ -97,5 +70,45 @@
    100% {
       width: 700px;
       background-color: #fff;
+   }
+}
+
+.skills__content__level__scale {
+   height: 100%;
+   width: 20%;
+   border-radius: 60px;
+   background-color: #0d7377;
+   z-index: 2;
+   border: 1px solid #0d7377;
+   box-shadow: 10px 0px 36px #000000;
+}
+
+.skills__content__level__scale-js {
+   width: 25%;
+   animation: box 20s ease infinite;
+}
+
+.skills__content__level__scale-css {
+   width: 30%;
+   animation: box 25s ease infinite;
+}
+
+.skills__content__level__scale-react {
+   width: 29%;
+   animation: box 35s ease infinite;
+}
+.skills__content__level__scale-redux {
+   width: 10%;
+   animation: box 30s ease infinite;
+}
+@keyframes box {
+   0% {
+      width: 25%;
+   }
+   50% {
+      width: 35%;
+   }
+   100% {
+      width: 25%;
    }
 }

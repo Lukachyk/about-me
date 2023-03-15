@@ -1,5 +1,6 @@
 import './styles.css';
 import avatar from './avatar.jpeg';
+import Loader from '../../Loader/Loader';
 
 const Skills = () => {
    return (
@@ -39,6 +40,7 @@ const Skills = () => {
                </div>
             </div>
          </div>
+         <Loader />
       </section>
    );
 };

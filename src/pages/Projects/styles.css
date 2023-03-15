@@ -1,0 +1,8 @@
+.projects {
+   grid-area: main;
+   margin-top: 103px;
+}
+.projects__content__items {
+   display: flex;
+   flex-direction: row;
+}

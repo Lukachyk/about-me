@@ -1,0 +1,37 @@
+/* Test for ChengImg*/
+
+.test {
+   grid-area: main;
+   overflow: hidden;
+   width: 413px;
+   height: 520px;
+   background-image: url('./img/avatar.jpeg');
+   background: no-repeat;
+
+   animation: next 12s linear infinite;
+}
+
+@keyframes next {
+   0% {
+      background-image: url('./img/avatar.jpeg');
+   }
+   16.6% {
+      background-image: url('./img/prog12-2-copy.jpeg');
+   }
+   33.3% {
+      background-image: url('./img/prog12-3-copy.jpeg');
+   }
+   50.6% {
+      background-image: url('./img/prog12-4-copy.jpeg');
+   }
+
+   70% {
+      background-image: url('./img/prog12-5-copy.jpeg');
+   }
+   80% {
+      background-image: url('./img/prog12-6-copy.jpeg');
+   }
+   100% {
+      background-image: url('./img/prog12-6-copy.jpeg');
+   }
+}

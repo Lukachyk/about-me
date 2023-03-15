@@ -1,0 +1,11 @@
+.project__content__items__card {
+   max-width: 250px;
+   max-height: 328px;
+}
+.project__content__items__card__title {
+   font-weight: 400;
+   font-size: 64px;
+   line-height: 1.43;
+
+   color: var(--white);
+}
