@@ -2,10 +2,21 @@
    max-width: 250px;
    max-height: 328px;
 }
+.projects__content__items {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   column-gap: 43px;
+}
+
+.project__content__items__card__img {
+   width: 250px;
+   height: 200px;
+}
 .project__content__items__card__title {
    font-weight: 400;
    font-size: 64px;
-   line-height: 1.43;
+   line-height: 1.4;
 
    color: var(--white);
 }
