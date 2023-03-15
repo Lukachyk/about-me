@@ -1,5 +1,6 @@
 import listProjects from '../../../porject-list/listProject';
 import './styles.css';
+import imgLoader from './img/807.png';
 
 const Project = () => {
    return (
@@ -12,9 +13,15 @@ const Project = () => {
                         className="project__content__items__card__img"
                         src={project.img}
                         alt={project.name}
+                        onError={(e) => {
+                           e.target.src = imgLoader;
+                        }}
                      />
                      <p className="project__content__items__card__title">
                         {project.name}
+                     </p>
+                     <p className="project__content__items__card__date">
+                        {project.datetime}
                      </p>
                   </a>
                </div>

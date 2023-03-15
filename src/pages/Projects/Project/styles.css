@@ -7,11 +7,17 @@
    flex-wrap: wrap;
    flex-direction: row;
    column-gap: 43px;
+   row-gap: 43px;
+   text-align: center;
 }
 
 .project__content__items__card__img {
    width: 250px;
    height: 200px;
+   background-color: #0d747710;
+   object-fit: contain;
+   border-radius: 10px;
+   box-shadow: 5px 0px 26px #000000;
 }
 .project__content__items__card__title {
    font-weight: 400;
@@ -19,4 +25,12 @@
    line-height: 1.4;
 
    color: var(--white);
+}
+
+.project__content__items__card__date {
+   font-weight: 400;
+   font-size: 36px;
+   line-height: 1.44;
+
+   color: var(--main-text);
 }
