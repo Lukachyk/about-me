@@ -5,7 +5,7 @@ import './styles.css';
 const Contacts = () => {
    const TOKEN = '6020872184:AAE_VBG3QEbbqCd2siAjx_DYjO_IR6QQiO4';
    const CHAT_ID = '-1001914694299';
-   const URI_API = `http://api.telegram.org/bot${TOKEN}/sendMessage}`;
+   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage}`;
 
    const handleClick = async (event) => {
       event.preventDefault();
