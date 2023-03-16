@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NoScroll from '../../utils/NoScroll';
 import done from './done.png';
 import './styles.css';
@@ -46,6 +46,15 @@ const Contacts = () => {
          console.error(error);
       }
    };
+
+   useEffect(() => {
+      if (submitted) {
+         const timeoutId = setTimeout(() => {
+            setSubmitted(false);
+         }, 5000);
+         return () => clearTimeout(timeoutId);
+      }
+   }, [submitted]);
 
    return (
       <section className="contacts">
