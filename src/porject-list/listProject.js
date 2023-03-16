@@ -46,7 +46,7 @@ const listProjects = [
       url: 'https://lukachyk.github.io/online-store/',
       name: 'Elegance',
       datetime: 'Jan 27 2023',
-      img: 'https://github.com/Lukachyk/about-me/blob/main/src/porject-list/imgProject/6-mini.jpeg?raw=true',
+      img: 'https://github.com/Lukachyk/about-me/blob/main/src/porject-list/imgProject/7-mini.jpeg?raw=true',
    },
    {
       id: 8,
