@@ -5,7 +5,7 @@ import './styles.css';
 const Contacts = () => {
    const TOKEN = '6020872184:AAE_VBG3QEbbqCd2siAjx_DYjO_IR6QQiO4';
    const CHAT_ID = '-1001914694299';
-   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage}`;
+   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
    const handleClick = async (event) => {
       event.preventDefault();
@@ -16,7 +16,7 @@ const Contacts = () => {
       const email = formData.get('email');
       const commentText = formData.get('comments');
 
-      const message = `<b>Заявка с сайта</b>\n;
+      const message = `<b>Заявка с сайта</b>\n
      <b>Отправитель: ${name} </b>\n
      <b>Потча : ${email} </b>\n
      <b>Комментн : ${commentText} </b>`;
