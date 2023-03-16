@@ -1,11 +1,17 @@
 import axios from 'axios';
+import { useState } from 'react';
 import NoScroll from '../../utils/NoScroll';
+import done from './done.png';
 import './styles.css';
 
 const Contacts = () => {
    const TOKEN = '6020872184:AAE_VBG3QEbbqCd2siAjx_DYjO_IR6QQiO4';
    const CHAT_ID = '-1001914694299';
+
    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+   const active = 'contacts__content__form__submitted';
+   const hide = 'none';
+   const [submitted, setSubmitted] = useState(false);
 
    const handleClick = async (event) => {
       event.preventDefault();
@@ -15,6 +21,12 @@ const Contacts = () => {
       const name = formData.get('name');
       const email = formData.get('email');
       const commentText = formData.get('comments');
+      // Проверяем, что все поля формы заполнены
+
+      if (!name || !email || !commentText) {
+         alert('Please fill out all fields before submitting the form');
+         return;
+      }
 
       const message = `<b>Заявка с сайта</b>\n
      <b>Отправитель: ${name} </b>\n
@@ -29,6 +41,7 @@ const Contacts = () => {
          });
 
          form.reset();
+         setSubmitted(true);
       } catch (error) {
          console.error(error);
       }
@@ -61,14 +74,17 @@ const Contacts = () => {
                      name="comments"
                   ></textarea>
                </div>
-               <button
-                  onClick={handleClick}
-                  className="contacts__content__form__name__btn"
-                  type="submit"
-                  value="Submit"
-               >
-                  Get in touch
-               </button>
+               <div className="contacts__content__form__block-wrapper">
+                  <button
+                     onClick={handleClick}
+                     className="contacts__content__form__btn"
+                     type="submit"
+                     value="Submit"
+                  >
+                     Get in touch
+                  </button>
+                  <img className={submitted ? active : hide} src={done} />
+               </div>
             </form>
          </div>
       </section>
