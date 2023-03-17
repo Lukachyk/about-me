@@ -2,16 +2,19 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import NoScroll from '../../utils/NoScroll';
 import done from './done.png';
+import error404 from './error404.png';
 import './styles.css';
 
 const Contacts = () => {
-   const TOKEN = '6020872184:AAE_VBG3QEbbqCd2siAjx_DYjO_IR6QQiO4';
-   const CHAT_ID = '-1001914694299';
+   const TOKEN = 'CHAT_ID';
+   const CHAT_ID = 'CHAT_ID';
 
    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
    const active = 'contacts__content__form__submitted';
+   const activeError = 'contacts__content__form__submitted_error';
    const hide = 'none';
    const [submitted, setSubmitted] = useState(false);
+   const [submittedErr, setSubmittedErr] = useState(false);
 
    const handleClick = async (event) => {
       event.preventDefault();
@@ -28,7 +31,7 @@ const Contacts = () => {
          return;
       }
 
-      const message = `<b>Заявка с сайта</b>\n
+      const message = `<b>Заявка с сайта!!!</b>\n
      <b>Отправитель: ${name} </b>\n
      <b>Потча : ${email} </b>\n
      <b>Комментн : ${commentText} </b>`;
@@ -43,18 +46,26 @@ const Contacts = () => {
          form.reset();
          setSubmitted(true);
       } catch (error) {
+         alert('The function is currently not working !!!!');
          console.error(error);
+         setSubmittedErr(true);
+         console.log(submitted);
       }
    };
 
    useEffect(() => {
-      if (submitted) {
+      if (submitted || submittedErr) {
          const timeoutId = setTimeout(() => {
-            setSubmitted(false);
+            if (submitted) {
+               setSubmitted(false);
+            }
+            if (submittedErr) {
+               setSubmittedErr(false);
+            }
          }, 5000);
          return () => clearTimeout(timeoutId);
       }
-   }, [submitted]);
+   }, [submitted, submittedErr]);
 
    return (
       <section className="contacts">
@@ -93,6 +104,10 @@ const Contacts = () => {
                      Get in touch
                   </button>
                   <img className={submitted ? active : hide} src={done} />
+                  <img
+                     className={submittedErr ? activeError : hide}
+                     src={error404}
+                  />
                </div>
             </form>
          </div>

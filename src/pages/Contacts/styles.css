@@ -100,3 +100,11 @@
 .none {
    display: none;
 }
+
+.contacts__content__form__submitted_error {
+   position: absolute;
+   right: 10%;
+   margin-top: 10px;
+   max-width: 50px;
+   max-height: 50px;
+}

@@ -17,8 +17,8 @@ function App() {
             <SideBar />
             <Suspense fallback={<div>Loading...</div>}>
                <Routes>
+                  <Route path="/" element={<About />} />
                   <Route path="/projects" element={<Projects />} />
-                  <Route path="/about" element={<About />} />
                   <Route path="/skills" element={<SkillsContainer />} />
                   <Route path="/contacts" element={<Contacts />} />
                </Routes>

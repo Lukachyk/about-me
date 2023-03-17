@@ -22,7 +22,7 @@ const SideBar = () => {
             <ul className="sidebar__nav__list">
                <li className="sidebar__nav__list__item">
                   <NavLink
-                     to="/about"
+                     to="/"
                      className={({ isActive }) =>
                         isActive ? activeLink : normalLink
                      }
@@ -66,6 +66,7 @@ const SideBar = () => {
                </li>
             </ul>
          </nav>
+
          <BtnLang />
       </aside>
    );
