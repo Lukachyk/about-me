@@ -6,8 +6,8 @@ import error404 from './error404.png';
 import './styles.css';
 
 const Contacts = () => {
-   const TOKEN = 'CHAT_ID';
-   const CHAT_ID = 'CHAT_ID';
+   const TOKEN = '6020872184:AAE_VBG3QEbbqCd2siAjx_DYjO_IR6QQiO4';
+   const CHAT_ID = '-1001914694299';
 
    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
    const active = 'contacts__content__form__submitted';
