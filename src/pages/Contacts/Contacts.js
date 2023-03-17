@@ -8,11 +8,11 @@ import './styles.css';
 const Contacts = () => {
    const TOKEN = '6020872184:AAE_VBG3QEbbqCd2siAjx_DYjO_IR6QQiO4';
    const CHAT_ID = '-1001914694299';
-
    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
    const active = 'contacts__content__form__submitted';
    const activeError = 'contacts__content__form__submitted_error';
    const hide = 'none';
+
    const [submitted, setSubmitted] = useState(false);
    const [submittedErr, setSubmittedErr] = useState(false);
 
